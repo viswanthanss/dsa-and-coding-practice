@@ -18,5 +18,7 @@ This repository contains beginner-friendly Java programs I wrote for practice. I
 
 Input: `Hello World`  
 Output (Program 1): `dlroW olleH`  
-Output (Program 2): `the sky is blue`
+
+Input: `the sky is blue `
+Output (Program 2): `blue is sky the`
 
