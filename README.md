@@ -20,5 +20,6 @@ Input: `Hello World`
 Output (Program 1): `dlroW olleH`  
 
 Input: `the sky is blue `
+
 Output (Program 2): `blue is sky the`
 
