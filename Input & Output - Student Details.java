@@ -10,7 +10,7 @@ public class Solution {
         char grade = sc.next().charAt(0);
 
         // Truncate CGPA to 2 decimal places
-        float truncatedCgpa = (int)(cgpa * 100) / 100.0f;
+        float truncatedCgpa = (int)(cgpa * 100) / 100.0f;   //removing characters //to shorten or cut off part of something
 
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
