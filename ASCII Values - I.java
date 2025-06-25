@@ -16,3 +16,21 @@ public class Main {
         System.out.println(ascii);                  // Print ASCII value
     }
 }
+
+
+-----------------------------------------------------------------------------------------------
+
+//ASCII Values - II
+
+    
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);    // Scanner to read input
+        int ascii = sc.nextInt();               // Read an integer (ASCII value)
+        char ch = (char) ascii;                 // Convert integer to character
+        System.out.println(ch);                 // Print the character
+    }
+}
+
