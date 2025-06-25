@@ -61,6 +61,7 @@ public class Main {  // Main class
             System.out.print(s);  // Print original
         } else {
             System.out.print(compressed);  // Print compressed
+            #code logic - https://chatgpt.com/share/685bb9cb-41e4-8010-b2db-fc62eb0ec3a1
         }
     }
 }
