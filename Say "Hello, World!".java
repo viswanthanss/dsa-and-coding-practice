@@ -21,3 +21,11 @@ public class Solution {                           // Required class name for Hac
 
 ----------------------------------------------------------------------------------
 
+public class Solution {                           // Required class name for Hackerrank to compile
+    public static void main(String[] args) {      // Entry point of the Java program
+        System.out.println("Hello World\nHello World");  // \n moves the cursor to a new line
+    }
+}
+
+
+-----------------------------------------------------------------------------------
