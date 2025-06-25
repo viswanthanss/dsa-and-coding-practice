@@ -34,3 +34,32 @@ public class Solution {
     }
 }
 
+
+------------------------------------------------------------------------------------------------
+
+
+// Input & Output - Round Off:
+
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);         // Input reader
+        float num = sc.nextFloat();                  // Read float value
+
+        System.out.println((int) num);               // Print integer part only (truncated)
+        System.out.println((int) Math.ceil(num));    // Print rounded-up value
+        System.out.println((int) Math.floor(num));   // Print rounded-down value
+    }
+}
+
+/*
+
+(int) num → truncates decimal part (not rounded)
+
+Math.ceil(num) → always rounds up
+
+Math.floor(num) → always rounds down
+
+*/
