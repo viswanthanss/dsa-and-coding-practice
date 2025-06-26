@@ -33,8 +33,6 @@ public class Main {
 
 
 
-/*
-
 Approach 2: 
 import java.util.*;  // Import scanner for input
 
@@ -66,4 +64,4 @@ public class Main {  // Main class
     }
 }
 
-*/
+
