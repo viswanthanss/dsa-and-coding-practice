@@ -1,7 +1,8 @@
 // Why backward? Because we're calculating the sum of right-side elements, so we must start from the rightmost side.
 
+// https://chatgpt.com/share/685e2cef-6398-8010-b8ad-34c537c96860
 
-//https://chatgpt.com/share/685e2cef-6398-8010-b8ad-34c537c96860
+
 import java.util.Scanner;
 
 public class Solution {
@@ -32,3 +33,41 @@ public class Solution {
         }
     }
 }
+
+
+
+//Approach 2 
+
+
+
+import java.util.Scanner;
+
+public class Solution 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);     // Input reader
+        int n = sc.nextInt();                    // Number of elements
+
+        int[] arr = new int[n];                  // Original array
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();               // Read array elements
+        }
+        //common part array
+        
+        int sum = 0;
+        for (int i = n - 1; i >= 0; i--) 
+        {
+            int current = arr[i];    // Store current value safely
+            arr[i] = sum;            // Replace with current right-side sum
+            sum = sum + current;     // Update running sum
+        }
+
+        //print 
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");      // Print modified array
+        }
+    }
+}
+
