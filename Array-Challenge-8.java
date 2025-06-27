@@ -17,10 +17,15 @@ public class Solution {
 
         int sum = 0;                              // Running sum from right
         for (int i = n - 1; i >= 0; i--) {
-            int temp = arr[i];                   // Save current value
-            arr[i] = sum;                        // Replace with sum of right elements
-            sum += temp;                         // Add saved value to running sum
+            int current = arr[i];    // Store current value safely
+            arr[i] = sum;            // Replace with current right-side sum
+            sum = sum + current;     // Update running sum
         }
+        // for (int i = n - 1; i >= 0; i--) {
+        //     int temp = arr[i];                   // Save current value
+        //     arr[i] = sum;                        // Replace with sum of right elements
+        //     sum += temp;                         // Add saved value to running sum
+        // }
 
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");      // Print modified array
