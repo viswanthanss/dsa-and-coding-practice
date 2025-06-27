@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);   // input reader
+
+        int x = sc.nextInt();   // friend's x
+        int y = sc.nextInt();   // friend's y
+
+        // directly compute distance and round it to nearest hop
+        int hops = (int)Math.round(Math.sqrt((x - 3)*(x - 3) + (y - 4)*(y - 4)));
+
+        System.out.println(hops);   // print answer
+    }
+}
