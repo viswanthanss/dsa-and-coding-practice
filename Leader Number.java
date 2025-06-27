@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main
+public class leader_number
 {
     public static void main(String[] args) 
     {
@@ -8,7 +8,7 @@ public class Main
         
         int n = sc.nextInt();           // Input size 
         int[] a = new int[n];           // arr declare
-        // int i;                       
+        // int i;   //common                    
         
         for(int i = 0; i < n; i++)          // Read arr elements
         {
@@ -18,7 +18,7 @@ public class Main
         int max = a[n - 1];            //last 
         System.out.print(max + " ");    // print first leader 
         
-        for(i = n - 2; i >= 0; i--)     // Traverse from right to left
+        for(int i = n - 2; i >= 0; i--)     // Traverse from right to left
         {
             if(a[i] > max)              // If current is greater than max
             {
