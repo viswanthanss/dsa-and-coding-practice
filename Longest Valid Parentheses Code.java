@@ -23,3 +23,6 @@ public class Main {
         System.out.println(maxLength);
     }
 }
+
+// code explanation : 
+//     https://chatgpt.com/share/6860129d-1528-8010-9278-7b0caa793063
