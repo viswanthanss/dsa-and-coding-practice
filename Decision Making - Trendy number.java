@@ -1,3 +1,6 @@
+//middle number extraction
+//hero part   int middle = (n/10) % 10;
+
 import java.util.*;
 
 public class Solution {
