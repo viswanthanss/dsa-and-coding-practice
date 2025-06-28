@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);         // Input reader
+        int n = sc.nextInt();                        // Number of elements
+        int[] a = new int[n];                        // Array to store elements
+        int sum = 0;                                 // Variable to store total sum
+
+        // Read elements and calculate total sum
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+            sum += a[i];
+        }
+
+        // Replace each element with (total sum - current element)
+        for (int i = 0; i < n; i++) {
+            System.out.print((sum - a[i]) + " ");
+        }
+    }
+}
+
+sample input:
+10  
+10 20 30 40 50 60 70 80 90 100
+
+sample output:
+540 530 520 510 500 490 480 470 460 450
+
