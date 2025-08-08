@@ -1,45 +1,60 @@
-// This is already defined by LeetCode:
-// class ListNode {
-//     int val;
-//     ListNode next;
-//     ListNode(int val) { this.val = val; }
-// }
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+
+import java.util.*;
 
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        // If one of the lists is empty, return the other
-        if (list1 == null) return list2;
-        if (list2 == null) return list1;
 
-        // Step 1: Choose the smaller first node to be the head of the merged list
-        ListNode head;  // This will be the first node in the result
-        if (list1.val < list2.val) {
-            head = list1;
-            list1 = list1.next;  // move forward in list1
-        } else {
-            head = list2;
-            list2 = list2.next;  // move forward in list2
+        // Step 1: Create a normal list to store all numbers
+        List<Integer> allNumbers = new ArrayList<>();
+
+        // Step 2: Add all values from list1
+        while (list1 != null) {
+            allNumbers.add(list1.val);
+            list1 = list1.next;
         }
 
-        // Step 2: tail is used to build the rest of the list
-        ListNode tail = head;
+        // Step 3: Add all values from list2
+        while (list2 != null) {
+            allNumbers.add(list2.val);
+            list2 = list2.next;
+        }
 
-        // Step 3: Walk through both lists and keep attaching the smaller value
-        while (list1 != null && list2 != null) {
-            if (list1.val < list2.val) {
-                tail.next = list1;
-                list1 = list1.next;
-            } else {
-                tail.next = list2;
-                list2 = list2.next;
+        // Step 4: Sort the numbers
+        Collections.sort(allNumbers);
+
+        // Step 5: Build the new linked list
+        ListNode head = null; // first node of the list
+        ListNode tail = null; // last node of the list
+
+        // Go through each number in the sorted list
+        for (int i = 0; i < allNumbers.size(); i++) {
+
+            // Create a new node containing this number
+            ListNode newNode = new ListNode(allNumbers.get(i));
+
+            // If the linked list is empty
+            if (head == null) {
+                head = newNode;  // first node
+                tail = newNode;  // also last node for now
+            } 
+            // If the list already has something
+            else {
+                tail.next = newNode; // join at the end
+                tail = newNode;      // update last node
             }
-            tail = tail.next;  // move the tail forward
         }
 
-        // Step 4: Attach whichever list is not empty (since it's already sorted)
-        if (list1 != null) tail.next = list1;
-        if (list2 != null) tail.next = list2;
-
-        return head;  // head points to the merged list
+        // Step 6: Return the start of the new list
+        return head;
     }
 }
